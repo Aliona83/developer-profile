@@ -1,3 +1,36 @@
-body{
-    background-color: brown;
+*
+{
+    padding: 0;
+    margin: 0;
+
+}
+#split-container{
+    display: flex;
+    height: 100vh;
+}
+.left-section {
+    flex: 1; /* Takes up 50% of the container */
+    padding: 20px;
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.right-section {
+    flex: 1; /* Takes up 50% of the container */
+    padding: 20px;
+}
+/* Style your image */
+.right-section img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    height: auto;
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    border-radius: 100%; /* Make it a circle */
+    object-fit: cover;
+    height: 500px;
+    width: 500px; 
 }

@@ -1,5 +1,5 @@
-// app.js
 const express = require('express');
+const path = require('path'); // Import the path module
 const app = express();
 
 app.use(express.json());
@@ -9,7 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    const indexPath = path.join(__dirname, 'index.html');
+    res.sendFile(indexPath);
 });
 
 app.get('/about', (req, res) => {
